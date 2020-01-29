@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 Future<int> fetchPost(String code) async {
   Map<String, String> headers = {
     HttpHeaders.acceptHeader: 'application/json',
-    HttpHeaders.authorizationHeader: '7d4c6ba8619344ae5d50d69cbe8868d8',
+    HttpHeaders.authorizationHeader: 'mainToken',
     HttpHeaders.contentTypeHeader: 'application/json'
 
   };
@@ -17,7 +17,7 @@ Future<int> fetchPost(String code) async {
       "method": "person.info",
       "params":{
                 "person_id":"$code",
-                "token":"378130d7734a06977bbf251e6deae9a9"
+                "token":"customToken"
                 }
       }''';
   body = json.encode(body);
